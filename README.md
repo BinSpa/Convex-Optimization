@@ -4,29 +4,57 @@ $${Coursework (1) \ for \ {Introductory\ Lectures\ on \ Optimization}}$$
 $${GuoYulong} \\ {22221271}\\
 {March. 28, 2023}$$
 
-\begin{document}
-\maketitle
 
-\begin{excercise}\label{e1}
-	\begin{enumerate}
-		\item Prove that the following univariate functions are in the set of $\mathcal{F}^1(\mathbb{R})$：
+
+Excercise 1:Prove that the following univariate functions are in the set of $\mathcal{F}^1(\mathbb{R})$
 	\begin{align}
 	f(x) &= e^x,\nonumber \\
 	f(x) &= |x|^p,\; p > 1,\nonumber \\
 	f(x) &= \frac{x^2}{1 + |x|},\nonumber \\
 	f(x) &= |x| - \ln (1 + |x|).\nonumber
 	\end{align}
-		\item Check the above functions are strongly convex or not. If yes, calculate the convexity parameter $\mu$.	
+Check the above functions are strongly convex or not. If yes, calculate the convexity parameter $\mu$.
 
 
+Proof 1: 
+Definition of the Convex Function:
+    A continuously differentiable function $f(\cdot)$ is called convex on a convex set $\mathcal{Q}$, $f \in \mathcal{F}^1(\mathcal{Q}^n)$ if for any $x,y \in \mathcal{Q}$ we have
+$$f(y) \geq f(x)+<\nabla{f(x)}, y-x>$$
+if $-f(x)$ is convex, we call $f(x)$ concave.
 
-	\end{enumerate}
-	
-\end{excercise}
+1. the function $f(x) = e^x$ is in the set of $\mathcal{F}^1(\mathbb{R})$
 
-\begin{PROOF}{e1}
-bla.bla... bla bla.. bla.
-\end{PROOF}
+    Proof:
+    
+    we can assume that $y \geq x$, then we have:
+    $$e^y-e^x=e^{\zeta}(y-x)$$
+    where $x \leq \zeta \leq y$, thus $e^{\zeta} \geq e^x$, the we have:
+    \begin{align}
+    e^y-e^x &\geq e^x(y-x)
+    f(y)-f(x)&\geq 
+    \end{align}
+2. the function $f(x) = |x|^p,\; p > 1$ is in the set of $\mathcal{F}^1(\mathbb{R})$
+    
+    Proof:
+    
+    $$\lim_{x \to 0^-} \frac{f(x)-f(0)}{x-0}=\lim_{x \to 0^+} \frac{f(x)-f(0)}{x-0}=0$$
+    thus, $f(x)$ is differentiable on $\mathbb{R}$
+    
+    if $p$ is even:
+    $$\nabla f(x)=px^{p-1}$$
+    if $p$ is odd:
+    $$\nabla f(x)=\begin{cases} px^{p-1}，x\geq 0 \\ -px^{p-1}， x<0 \end{cases}$$
+                                                             the $f(x)$ is Monotonically increasing on $\mathbb{R}$.
+
+if $x\geq 0, \, y\geq 0, x\leq y$, we have:                                                                   $$\begin{align}
+      f(y)-f(x) &= \nabla f(\zeta)(y-x),  x\leq\zeta\leq y\\                      &\geq \nabla f(x)(y-x) \\
+                                                                   f(y)&\geq f(x)+<f(x), y-x> \end{align}$$         then we get the result.
+    
+3. the function $f(x) = \frac{x^2}{1 + |x|}$ is in the set of $\mathcal{F}^1(\mathbb{R})$
+    
+    Proof:
+    $$$$
+4. the function $f(x) = e^x$ is in the set of $\mathcal{F}^1(\mathbb{R})$
 
 \begin{excercise}\label{e2}
 	\begin{definition}
