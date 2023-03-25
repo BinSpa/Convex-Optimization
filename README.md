@@ -149,17 +149,17 @@ $$\nabla^2 f(x) = 2A^TA$$
 if there is a $\mu>0$ make $\nabla^2f(x)\succeq \mu I_d$, then $f(x)$ is strong convex.
 
 2. 
-$$\frac{\partial f(\omega)}{\partial \omega_k}=\frac{1}{m}\sum_{i=1}^{m}\frac{x_{ik}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}$$
+$$\frac{\partial f(\omega)}{\partial \omega_k}=\frac{1}{m}\sum_{i=1}^{m}\frac{-y_ix_{ik}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}$$
 $$\nabla f(\omega)=
 \begin{bmatrix}
-{\frac{1}{m}\sum_{i=1}^{m}\frac{x_{i0}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}}\\
+{\frac{1}{m}\sum_{i=1}^{m}\frac{-y_ix_{i0}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}}\\
 {\vdots}\\
-{\frac{1}{m}\sum_{i=1}^{m}\frac{x_{in}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}}
+{\frac{1}{m}\sum_{i=1}^{m}\frac{-y_ix_{in}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}}
 \end{bmatrix}$$
 $$\nabla^2f(\omega)=\begin{bmatrix}
-{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot x_{i0}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}\\
-{\vdots}\\
-{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot x_{in}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}
+{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{i0}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}&{\cdots}&{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{i0}x_{in}}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}\\
+{\vdots}&{\ddots}&{\vdots}\\
+{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{in}x_{i0}}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}&{\cdots}&{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{in}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}
 \end{bmatrix}$$
 
 
