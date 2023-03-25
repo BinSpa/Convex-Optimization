@@ -163,20 +163,36 @@ $$\nabla^2f(\omega)=\begin{bmatrix}
 \end{bmatrix}$$
 
 
-\begin{excercise}\label{e4}
+Excercise 4.
+
 Given a function $f(x)\in \mathcal{F} ^{1,1}_l(\mathbb{R}^n)$.
-\begin{enumerate}
-	\item Prove that the function $g(t)=f(x+ty)$ is convex;
-	\item Calculate $\lim_{t\to 0^+}\frac{g(t)-g(0)}{t}$;
-	\item Suppose that g is convex and not necessarily smooth, show that there exists a constant h, such that $g(t)\geq g(0)+\langle h,t\rangle$;
-	\item Show that there exists a function h(x), such that $f(y)\geq f(x)+\langle h(x),y-x\rangle$.
-\end{enumerate}
-\end{excercise}
 
-\begin{PROOF}{e4}
-bla.bla... bla bla.. bla.
-\end{PROOF}
+1. Prove that the function $g(t)=f(x+ty)$ is convex;
+    
+2. Calculate $\lim_{t\to 0^+}\frac{g(t)-g(0)}{t}$;
+	
+3. Suppose that g is convex and not necessarily smooth, show that there exists a constant h, such that $g(t)\geq g(0)+\langle h,t\rangle$;
+	
+4. Show that there exists a function h(x), such that $f(y)\geq f(x)+\langle h(x),y-x \rangle$.
 
+Proof:
+    
+1.  lemma:A continuous differentiable function $f\in \mathcal{F}^1(\mathcal{Q})$ , if and only if for any $x,y\in \mathcal{Q}$, $$\langle \nabla f(x)-\nabla f(y), x-y\rangle\geq 0$$
+    proof:
+    $$f(x)\geq f(y)+\langle \nabla f(y), x-y\rangle \\f(y) \geq f(x)+\langle \nabla f(x), y-x\rangle$$
+    Thus, add the above inequalites, we have:
+    $$\langle \nabla f(x)-\nabla f(y), x-y\rangle\geq 0$$
 
+    for any $\alpha,\beta\in\mathbb{R}$, we have:
+    $$\langle\nabla f(x+\alpha y)-\nabla f(x+\beta y), y(\alpha-\beta)\rangle\geq 0$$
+    Thus, for $g(\alpha), g(\beta)$, we have:
+    $$\begin{align}\langle\nabla g(\alpha)-\nabla g(\beta), \alpha-\beta\rangle&=\langle y(\nabla f(x+\alpha y)-\nabla f(x+\beta y)), \alpha-\beta\rangle\ \\ &=\langle \nabla f(x+\alpha y)-\nabla f(x+\beta y), y(\alpha-\beta)\rangle \\ &\geq 0\end{align}$$
+    So $g(t)$ is a convex function.
 
-\end{document}
+2. Use Lagrange differential median theorem for multivariate functions, we have:
+    $$\begin{align}\lim_{t\to 0^+}\frac{g(t)-g(0)}{t} &= \lim_{t\to 0^+}\frac{f(x+ty)-f(x)}{t} \\ &=\lim_{t\to 0^+}\frac{\langle \nabla f(\zeta), ty\rangle}{t}\\&=\langle f(x), y\rangle\end{align}$$
+    where $\zeta\in [x,x+ty]$.
+
+3. 
+    
+    
