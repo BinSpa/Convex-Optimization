@@ -113,25 +113,25 @@ for $\lim_{x\to +\infty}\nabla^2f(x)=\lim_{x\to -\infty}\nabla^2f(x)=0$, thus, t
 4. the function $f(x) = |x| - \ln (1 + |x|)$ is not a strong convex function.
     $$\nabla^2f(x)=\begin{cases}\frac{1}{(1+x)^2},\, x\geq 0 \\ \frac{1}{(1-x)^2},\, x<0 \end{cases}$$
 for $\lim_{x\to +\infty}\nabla^2f(x)=\lim_{x\to -\infty}\nabla^2f(x)=0$, thus, there is no $\mu>0$ satisfy the definition.
-\begin{excercise}\label{e2}
-	\begin{definition}
-		A mapping $\Phi:\mathbb{H}\to\mathbb{R}_+$ is said to be a norm on $\mathbb{H}$ if it satisfies the following axioms:
-		\begin{itemize}
-			\item definiteness: $\forall x\in\mathbb{H},\Phi(x)=0\Leftrightarrow x=0;$
-			\item homogeneity: $\forall x\in\mathbb{H},\forall \alpha \in\mathbb{R},\Phi(\alpha x)=|\alpha|\Phi(x);$
-			\item triangle inequality: $\forall x,y\in\mathbb{H},\Phi(x+y)\leq\Phi(x)+\Phi(y).$
-		\end{itemize}
-	\end{definition}
-	Suppose a vector norm $\left\lVert \cdot\right\rVert _p$ on $ \mathbb{R}^m$ and a vector norm $\left\lVert \cdot\right\rVert _q$ on $ \mathbb{R}^n$ are given, 
-	show that the induced norm: $\left\lVert A\right\rVert _{p,q}=\sup_{x\neq0}\frac{\left\lVert Ax\right\rVert _p}{\left\lVert x\right\rVert _q}$ is a norm, where $A \in \mathbb{R}^{m\times n}$, $x\in\mathbb{R}^n$ with $x\neq0$.
-\end{excercise}
 
-\begin{PROOF}{e2}
-	bla.bla... bla bla.. bla.
-\end{PROOF}
+Excercise 2.
+
+A mapping $\Phi:\mathbb{H}\to\mathbb{R}_+$ is said to be a norm on $\mathbb{H}$ if it satisfies the following axioms:
+definiteness: $\forall x\in\mathbb{H},\Phi(x)=0\Leftrightarrow x=0;$
+			
+homogeneity: $\forall x\in\mathbb{H},\forall \alpha \in\mathbb{R},\Phi(\alpha x)=|\alpha|\Phi(x);$
+    
+triangle inequality: $\forall x,y\in\mathbb{H},\Phi(x+y)\leq\Phi(x)+\Phi(y).$
 
 
-Excercise 3
+Suppose a vector norm $\left\lVert \cdot\right\rVert _p$ on $\mathbb{R}^m$ and a vector norm $\left\lVert \cdot\right\rVert _q$ on $\mathbb{R}^n$ are given, 
+
+show that the induced norm: $\left\lVert A\right\rVert _{p,q}=\sup_{x\neq0}\frac{\left\lVert Ax\right\rVert _p}{\left\lVert x\right\rVert _q}$ is a norm, where $A \in \mathbb{R}^{m\times n}$, $x\in\mathbb{R}^n$ with $x\neq0$.
+
+
+
+
+Excercise 3.
 
 Calculate the gradient and Hessian of the following multivariate functions and then prove that under which condition they are (strongly) convex.  
 	\begin{align}
@@ -193,6 +193,13 @@ Proof:
     $$\begin{align}\lim_{t\to 0^+}\frac{g(t)-g(0)}{t} &= \lim_{t\to 0^+}\frac{f(x+ty)-f(x)}{t} \\ &=\lim_{t\to 0^+}\frac{\langle \nabla f(\zeta), ty\rangle}{t}\\&=\langle f(x), y\rangle\end{align}$$
     where $\zeta\in [x,x+ty]$.
 
-3. 
+3. If $g$ is convex, we have:
+    $$g(t)-g(0)\geq \langle \nabla g(0), t\rangle$$
+    Thus, we can get the constant $h=\nabla g(0)$.
+
+4. Because $f(x)\in \mathcal{F}^{1,1}_l$, then we have:
+    $$f(y)\geq f(x)+\langle \nabla f(x),\, y-x\rangle$$
+    Thus, $h(x)=\nabla f(x)$.
+
     
     
