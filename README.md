@@ -117,16 +117,33 @@ for $\lim_{x\to +\infty}\nabla^2f(x)=\lim_{x\to -\infty}\nabla^2f(x)=0$, thus, t
 Excercise 2.
 
 A mapping $\Phi:\mathbb{H}\to\mathbb{R}_+$ is said to be a norm on $\mathbb{H}$ if it satisfies the following axioms:
+
 definiteness: $\forall x\in\mathbb{H},\Phi(x)=0\Leftrightarrow x=0;$
 			
 homogeneity: $\forall x\in\mathbb{H},\forall \alpha \in\mathbb{R},\Phi(\alpha x)=|\alpha|\Phi(x);$
     
 triangle inequality: $\forall x,y\in\mathbb{H},\Phi(x+y)\leq\Phi(x)+\Phi(y).$
 
-
 Suppose a vector norm $\left\lVert \cdot\right\rVert _p$ on $\mathbb{R}^m$ and a vector norm $\left\lVert \cdot\right\rVert _q$ on $\mathbb{R}^n$ are given, 
 
 show that the induced norm: $\left\lVert A\right\rVert _{p,q}=\sup_{x\neq0}\frac{\left\lVert Ax\right\rVert _p}{\left\lVert x\right\rVert _q}$ is a norm, where $A \in \mathbb{R}^{m\times n}$, $x\in\mathbb{R}^n$ with $x\neq0$.
+    
+Proof:
+    
+Since $||\cdot||_p$ and $||\cdot||_q$ are both vector norms, we have:
+
+definiteness:
+    
+$$\forall x\in\mathbb{H}, ||\cdot||_p,\, ||\cdot||_q=0\Leftrightarrow x=0$$
+Thus, if $x\neq 0$, $||A||_{p,q}\neq 0$, thus $||A_{p,q}||\Leftrightarrow x=0$.
+
+homogeneity:
+
+$$||\lambda A||=sup_{x\neq 0}\frac{||\lambda Ax||_p}{||x||_q}=\frac{\lambda ||Ax||}{||x||_q}=\lambda ||A||$$
+
+triangle inequality:
+
+$$||A+B||_{p,q}=sup_{x\neq 0}\frac{||(A+B)x||_{p}}{||x||_{q}}\leq sup_{x\neq 0}\frac{||Ax||_p+||Bx||_p}{||x||_q}=||A||_{p,q}+||B||_{p,q}$$
 
 
 
