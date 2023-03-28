@@ -139,12 +139,12 @@ Thus, if $x\neq 0$, $||A||_{p,q}\neq 0$, thus $||A_{p,q}||\Leftrightarrow x=0$.
 
 homogeneity:
 
-$$||\lambda A||=sup_{x\neq 0}\frac{||\lambda Ax||_p}{||x||_q}=\frac{\lambda ||Ax||}{||x||_q}=\lambda ||A||$$
+$$||\lambda A||=sup_{x\neq 0}\frac{||\lambda Ax||_p}{||x||_q}=sup_{x\neq 0}\frac{\lambda ||Ax||}{||x||_q}=\lambda ||A||$$
 
 triangle inequality:
 
 $$||A+B||_{p,q}=sup_{x\neq 0}\frac{||(A+B)x||_{p}}{||x||_{q}}\leq sup_{x\neq 0}\frac{||Ax||_p+||Bx||_p}{||x||_q}=||A||_{p,q}+||B||_{p,q}$$
-
+Thus, $||A||_{p,q}$ is a norm.
 
 
 
@@ -171,13 +171,14 @@ $$\nabla f(\omega)=
 \begin{bmatrix}
 {\frac{1}{m}\sum_{i=1}^{m}\frac{-y_ix_{i0}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}}\\
 {\vdots}\\
-{\frac{1}{m}\sum_{i=1}^{m}\frac{-y_ix_{in}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}}
+{\frac{1}{m}\sum_{i=1}^{m}\frac{-y_ix_{i(n-1)}}{1+exp(-y_i\langle \omega,\,x_i\rangle)}}
 \end{bmatrix}$$
 $$\nabla^2f(\omega)=\begin{bmatrix}
-{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{i0}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}&{\cdots}&{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{i0}x_{in}}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}\\
+{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{i0}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}&{\cdots}&{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{i0}x_{i(n-1)}}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}\\
 {\vdots}&{\ddots}&{\vdots}\\
-{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{in}x_{i0}}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}&{\cdots}&{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{in}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}
+{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{in}x_{i0}}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}&{\cdots}&{\frac{1}{m}\sum_{i=1}^{m}\frac{exp(-y_i\langle \omega,\,x_i\rangle)\cdot y_i^2\cdot x_{i(n-1)}^2}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}
 \end{bmatrix}$$
+if we set ${\frac{exp(-y_i\langle \omega,\,x_i\rangle)}{(1+exp(-y_i\langle \omega,\,x_i\rangle))^2}}=k_i$, $\alpha_i=[x_{i0}, x_{i1},\cdots, x_{in}]^T$, then $\nabla^2f(\omega)=\frac{1}{m}\sum^m_{i=1}k_i\alpha_i\alpha_i^T$, thus if $\frac{1}{m}\sum^m_{i=1}k_i\alpha_i\alpha_i^T\succeq\mu I_n$, the $f(\omega)$ is strong convex. 
 
 
 Excercise 4.
